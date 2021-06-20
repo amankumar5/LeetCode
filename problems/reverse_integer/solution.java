@@ -6,7 +6,7 @@ class Solution {
             {
                 int a=x%10;
                 sum=sum*10+a;
-                x=x/10;
+                x/=10;
             }
         }
         else{
@@ -15,11 +15,10 @@ class Solution {
             {
                int a=x%10;
                 sum=sum*10+a;
-                x=x/10;
+                x/=10;
             }
-            sum*=(-1);
+            sum*=-1;
         }
-        int limit=2^31;
         if(sum<=2147483647 && sum>=-2147483648){
             
         return (int)sum;
