@@ -27,7 +27,11 @@ class Solution {
             {
                 for(int rowItr = 0; rowItr<columnSize; rowItr++)
                 {
+                    if(matrix[j][rowItr]==k)
+                        return k;
                     maxOfRow[rowItr] +=matrix[j][rowItr]; 
+                    if(maxOfRow[rowItr] == k)
+                        return k;
                 }
                
             int tempMax = findMaxofRow(maxOfRow,k);
